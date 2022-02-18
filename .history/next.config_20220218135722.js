@@ -1,5 +1,4 @@
 const API_KEY = "d158d56f1e8383479addb4904f28a5d2";
-
 module.exports = {
   reactStrictMode: true,
   async redirects() {
@@ -16,6 +15,10 @@ module.exports = {
       {
         source: "/api/movies",
         destination: `https://api.themoviedb.org/3/movie/popular?api_key=${API_KEY}`,
+      },
+      {
+        source: "/api/movies/:id",
+        destination: `https://api.themoviedb.org/3/movie/:id?api_key=${API_KEY}`,
       },
     ];
   },

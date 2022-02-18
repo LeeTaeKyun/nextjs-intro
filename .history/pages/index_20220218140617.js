@@ -12,9 +12,6 @@ export default function Home() {
   return (
     <div className="container">
       <Seo title="Home" />
-      <h1 className="text-3xl font-bold underline">
-      Hello world!
-    </h1>
       {!movies && <h4>Loading...</h4>}
       {movies?.map((movie) => (
         <div className="movie" key={movie.id}>
